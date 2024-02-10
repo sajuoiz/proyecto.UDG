@@ -32,12 +32,15 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link custom-nav-link" href="#">
+              <a
+                className="nav-link custom-nav-link"
+                href="#productos-populares"
+              >
                 Tendencia
               </a>
             </li>
             <li className="nav-item" style={{ paddingRight: '40px' }}>
-              <a className="nav-link custom-nav-link" href="#">
+              <a className="nav-link custom-nav-link" href="#sobre-nosotros">
                 Nosotros
               </a>
             </li>
