@@ -1,0 +1,19 @@
+.custom-header {
+  background-color: #007bff; /* Cambia este valor al color que prefieras */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-nav-link:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el ratón */
+  color: #fff; /* Color del texto al pasar el ratón */
+  border-radius: 0.25rem;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.custom-navbar-nav {
+  display: flex;
+  justify-content: flex-end; /* Alinea los elementos del menú a la derecha */
+  width: 100%;
+}

@@ -1,3 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './all.css';
+
 export default function RootLayout({
   children,
 }: {
