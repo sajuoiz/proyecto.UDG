@@ -3,7 +3,7 @@ const Header = () => {
     <header className={`navbar navbar-expand-lg navbar-dark custom-header`}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Ecommerce
+          InnovaSphere
         </a>
         <button
           className="navbar-toggler"
@@ -24,13 +24,16 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link custom-nav-link" href="#">
-                Tendencia
+              <a
+                className="nav-link custom-nav-link"
+                href="#categorias-destacadas"
+              >
+                Categorias
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link custom-nav-link" href="#">
-                Catalogo
+                Tendencia
               </a>
             </li>
             <li className="nav-item" style={{ paddingRight: '40px' }}>
