@@ -2,6 +2,8 @@ import Link from 'next/link';
 import Header from './header';
 import ProductoDestacado from './components/Producto';
 import CategoriaDestacada from './components/categoriaDestacada';
+import pcBanner from '../public/imagenes/pc-banner-0.jpg';
+import monitorBanner from '../public/imagenes/pc-banner-1.jpg';
 import Image from 'next/image';
 import audifonosSonyImage from '../public/imagenes/audifonos_sony.jpg';
 import laptopLegionImage from '../public/imagenes/laptop_legion.jpg';
@@ -17,28 +19,62 @@ const Home = () => {
   return (
     <div className="flex min-h-screen flex-col p-6">
       <Header />
-      <main className="bg-light flex min-h-screen flex-col p-6">
-        <section
-          id="banner-principal"
-          className="mb-6 bg-blue-500 pt-4 text-center text-white"
-        >
-          <Image
-            src={bannerPrincipalImage}
-            alt="Banner Principal"
-            width={900}
-            height={600}
-          />
-          <h2 className="mt-4 text-4xl font-bold" style={{ color: 'black' }}>
-            La tecnología del futuro, hoy.
-          </h2>
-          <p className="mt-2 text-xl" style={{ color: 'black' }}>
-            Vive la experiencia de la última innovación en cada producto.
-          </p>
-          <Link href="/productos">
-            <button className="btn-primary">Comprar Ahora</button>
-          </Link>
-        </section>
 
+      <main className="bg-light flex min-h-screen flex-col p-6">
+        <div className="d-flex justify-content-center">
+          <div className="col-10">
+            <div
+              id="carouselExampleIndicators"
+              className="carousel slide"
+              data-ride="carousel"
+            >
+              <ol className="carousel-indicators">
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="0"
+                  className="active"
+                ></li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="1"
+                ></li>
+                <li
+                  data-target="#carouselExampleIndicators"
+                  data-slide-to="2"
+                ></li>
+              </ol>
+              <div className="carousel-inner">
+                <div className="carousel-item banner-1 active"></div>
+                <div className="carousel-item banner-2"></div>
+                <div className="carousel-item banner-3"></div>
+              </div>
+              <a
+                className="carousel-control-prev"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Previous</span>
+              </a>
+              <a
+                className="carousel-control-next"
+                href="#carouselExampleIndicators"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span className="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
         <section id="categorias-destacadas" className="my-4">
           <div className="container mx-auto p-4">
             <h3>Categorías Destacadas</h3>

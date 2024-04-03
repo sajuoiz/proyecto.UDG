@@ -121,3 +121,27 @@
     flex-basis: 50%;
   }
 }
+
+.carousel-inner img {
+  height: 80vh;
+}
+
+.banner-1 {
+  /* responsive background image */
+  background-image: url('../../public/imagenes/pc-banner-1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-2 {
+  /* responsive background image */
+  background-image: url('../../public/imagenes/pc-banner-0.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
