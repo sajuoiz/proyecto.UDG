@@ -1,9 +1,19 @@
+import Image from 'next/image';
+import LogoImg from '../../public/imagenes/logo/logo-principal.png';
+
 const Header = () => {
   return (
     <header className={`navbar navbar-expand-lg navbar-dark custom-header`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          InnovaSphere
+        <a className="navbar-brand" style={{ marginLeft: '50px' }} href="#">
+          CiberEspacio
+          <Image
+            src={LogoImg}
+            alt="Logo de la empresa"
+            width={50}
+            height={50}
+            style={{ marginLeft: '20px' }}
+          />
         </a>
         <button
           className="navbar-toggler"
@@ -16,31 +26,25 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="navbar-collapse collapse" id="navbarNavDropdown">
+        {/* create a next image with a good aspect ratio for the logo in the header */}
+
+        <div
+          className="navbar-collapse d-flex justify-content-end collapse me-4"
+          id="navbarNavDropdown"
+        >
           <ul className="navbar-nav custom-navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link custom-nav-link" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link custom-nav-link"
-                href="#categorias-destacadas"
-              >
+            <li className="data-container px-4">
+              <a className="btn" href="#categorias-destacadas">
                 Categorias
               </a>
             </li>
-            <li className="nav-item">
-              <a
-                className="nav-link custom-nav-link"
-                href="#productos-populares"
-              >
+            <li className="data-container px-4">
+              <a className="btn" href="#productos-populares">
                 Tendencia
               </a>
             </li>
-            <li className="nav-item" style={{ paddingRight: '40px' }}>
-              <a className="nav-link custom-nav-link" href="#sobre-nosotros">
+            <li className="data-container px-4">
+              <a className="btn" href="#sobre-nosotros">
                 Nosotros
               </a>
             </li>
