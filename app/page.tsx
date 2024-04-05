@@ -9,6 +9,8 @@ import Banner from './components/banner';
 import pcBanner from '../public/imagenes/pc-banner-0.jpg';
 import monitorBanner from '../public/imagenes/pc-banner-1.jpg';
 import Image from 'next/image';
+import laptopGamerImg from '/public/imagenes/categorias/Laptop_Gamer_Categorias.jpg';
+import computadoraGamerImg from '/public/imagenes/categorias/Computadoras_Gamer_Categorias.jpg';
 import audifonosSonyImage from '../public/imagenes/audifonos_sony.jpg';
 import laptopLegionImage from '../public/imagenes/laptop_legion.jpg';
 import pcGamerImage from '../public/imagenes/pc_gamer.jpg';
@@ -20,33 +22,44 @@ import InnovationImage from '../public/imagenes/innovation.jpg';
 import bannerPrincipalImage from '../public/imagenes/banner-principal.jpg';
 
 const Home = () => {
-  // const carouselImages = [
-  //   '/imagenes/pc-banner-0.jpg',
-  //   '/imagenes/pc-banner-1.jpg',
-  //   '/imagenes/banner-teclado.jpg',
-  //   '/imagenes/banner-audifonos.jpg',
-  // ];
-  // const [activeIndex, setActiveIndex] = useState(0);
-
-  // const goToPrevious = () => {
-  //   const isFirstSlide = activeIndex === 0;
-  //   const newIndex = isFirstSlide ? carouselImages.length - 1 : activeIndex - 1;
-  //   setActiveIndex(newIndex);
-  // };
-
-  // const goToNext = () => {
-  //   const isLastSlide = activeIndex === carouselImages.length - 1;
-  //   const newIndex = isLastSlide ? 0 : activeIndex + 1;
-  //   setActiveIndex(newIndex);
-  // };
-
-  // // Automatic carousel change
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     goToNext();
-  //   }, 3000); // Change slide every 3 seconds
-  //   return () => clearInterval(interval);
-  // }, [activeIndex]);
+  const categories = [
+    {
+      imageUrl: laptopGamerImg,
+      title: 'Laptops',
+      description:
+        'Descubre nuestra selección de laptops de alto rendimiento para gaming, trabajo y entretenimiento. Elige entre las mejores marcas y los últimos modelos.',
+      link: '/categorias/computadoras-portatiles',
+      width: 300,
+      height: 200,
+    },
+    {
+      imageUrl: computadoraGamerImg,
+      title: 'Computadoras de Escritorio',
+      description:
+        'Explora nuestra amplia gama de smartphones, desde dispositivos de entrada hasta los más avanzados. Encuentra el teléfono perfecto para ti.',
+      link: 'categorias/computadoras-escritorio',
+      width: 300,
+      height: 200,
+    },
+    {
+      imageUrl: '/imagenes/perifericos.jpg',
+      title: 'Monitores',
+      description:
+        'Mejora tu experiencia de usuario con nuestra selección de teclados, ratones, auriculares y más. Todo lo que necesitas para tu configuración perfecta.',
+      link: '/categorias/perifericos',
+      width: 300,
+      height: 300,
+    },
+    {
+      imageUrl: '/imagenes/perifericos.jpg',
+      title: 'teclados',
+      description:
+        'Mejora tu experiencia de usuario con nuestra selección de teclados, ratones, auriculares y más. Todo lo que necesitas para tu configuración perfecta.',
+      link: '/categorias/perifericos',
+      width: 300,
+      height: 300,
+    },
+  ];
   return (
     <div className="flex min-h-screen flex-col p-6">
       <Header />
@@ -54,53 +67,23 @@ const Home = () => {
       <main className="bg-light flex min-h-screen flex-col p-6">
         <Banner />
 
-        <section id="categorias-destacadas" className="my-4">
-          <div className="container mx-auto p-4">
-            <h3>Categorías Destacadas</h3>
-            <div className="row justify-content-center">
-              <div className="col p-2">
+        <div className="container my-4">
+          <h3>Categorías Destacadas</h3>
+          <div className="row">
+            {categories.map((category, index) => (
+              <div key={index} className="col-md-6 col-lg-4 col-xl-3 mb-4">
                 <CategoriaDestacada
-                  imagenUrl={audifonosSonyImage.src}
-                  titulo="Audifonos"
-                  descripcion="Sumérgete en el mundo del sonido con nuestra amplia gama de audífonos. Desde modelos in-ear compactos y discretos hasta auriculares over-ear de alta fidelidad, nuestra colección está diseñada para llevar tu experiencia auditiva a un nuevo nivel."
-                  enlace="/"
-                  width={300}
-                  height={300}
+                  imageUrl={category.imageUrl}
+                  title={category.title}
+                  description={category.description}
+                  link={category.link}
+                  width={category.width}
+                  height={category.height}
                 />
               </div>
-              <div className="col p-2">
-                <CategoriaDestacada
-                  imagenUrl={laptopLegionImage.src}
-                  titulo="Laptops"
-                  descripcion="Explora nuestra selección exclusiva de laptops para todos los usos: desde modelos ultraligeros para los que están siempre en movimiento, hasta potentes estaciones de trabajo para profesionales y gamers. Encuentra la herramienta perfecta que se adapte a tu estilo de vida y potencie tu productividad."
-                  enlace="/"
-                  width={300}
-                  height={300}
-                />
-              </div>
-              <div className="col p-2">
-                <CategoriaDestacada
-                  imagenUrl={pcGamerImage.src}
-                  titulo="PC de escritorio"
-                  descripcion="Descubre la potencia y versatilidad en nuestra selección de PCs de escritorio, diseñadas para satisfacer desde las tareas diarias hasta las demandas más intensas de los profesionales creativos y jugadores. "
-                  enlace="/"
-                  width={300}
-                  height={300}
-                />
-              </div>
-              <div className="col p-2">
-                <CategoriaDestacada
-                  imagenUrl={monitorLG.src}
-                  titulo="Monitores"
-                  descripcion="Amplía tu visión con nuestra colección de monitores, que ofrecen la claridad, el color y el rendimiento que necesitas para sumergirte completamente en tus proyectos y juegos. Desde resoluciones ultra nítidas hasta tasas de refresco que superan toda expectativa, cada monitor está diseñado para ofrecerte una experiencia visual sin precedentes."
-                  enlace="/"
-                  width={300}
-                  height={300}
-                />
-              </div>
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
 
         <section id="productos-populares" className="my-4">
           <div className="container mx-auto p-4">
@@ -137,7 +120,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="sobre-nosotros" className="my-4 bg-gray-100 py-4">
+        {/* <section id="sobre-nosotros" className="my-4 bg-gray-100 py-4">
           <div className="d-flex container mx-auto ">
             <div className="row justify-content-center">
               <div className="col-4">
@@ -164,7 +147,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );

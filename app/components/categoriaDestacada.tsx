@@ -1,41 +1,35 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
-type CategoriaDestacadaProps = {
-  imagenUrl: string;
-  titulo: string;
-  descripcion: string;
-  enlace: string;
+interface ProductCategoryProps {
+  imageUrl: string;
+  title: string;
+  description: string;
+  link: string;
   width: number;
   height: number;
-};
+}
 
-const CategoriaDestacada: React.FC<CategoriaDestacadaProps> = ({
-  imagenUrl,
-  titulo,
-  descripcion,
-  enlace,
+const ProductCategory: React.FC<ProductCategoryProps> = ({
+  imageUrl,
+  title,
+  description,
+  link,
   width,
   height,
 }) => {
   return (
-    <div className="card" style={{ minHeight: '736px' }}>
-      <Image
-        src={imagenUrl}
-        className="card-img-top"
-        alt={titulo}
-        width={width}
-        height={height}
-      />
-      <div className="card-body">
-        <h5 className="card-title">{titulo}</h5>
-        <p className="card-text">{descripcion}</p>
-        <Link href={enlace} className="btn btn-primary">
-          Explorar
+    <div className="h-100">
+      <Image src={imageUrl} alt={title} width={width} height={height} />
+      <div className="card-body d-flex flex-column">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
+        <Link href={link} className="btn btn-primary mt-auto">
+          Explore
         </Link>
       </div>
     </div>
   );
 };
 
-export default CategoriaDestacada;
+export default ProductCategory;
