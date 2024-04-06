@@ -6,11 +6,13 @@ import Header from './header';
 import ProductoDestacado from './components/Producto';
 import CategoriaDestacada from './components/categoriaDestacada';
 import Banner from './components/banner';
+import Footer from './footer';
 import pcBanner from '../public/imagenes/pc-banner-0.jpg';
 import monitorBanner from '../public/imagenes/pc-banner-1.jpg';
 import Image from 'next/image';
 import laptopGamerImg from '/public/imagenes/categorias/Laptop_Gamer_Categorias.jpg';
 import computadoraGamerImg from '/public/imagenes/categorias/Computadoras_Gamer_Categorias.jpg';
+import monitorGamerImg from '/public/imagenes/categorias/Monitor_Gamer_Categorias.jpg';
 import audifonosSonyImage from '../public/imagenes/audifonos_sony.jpg';
 import laptopLegionImage from '../public/imagenes/laptop_legion.jpg';
 import pcGamerImage from '../public/imagenes/pc_gamer.jpg';
@@ -42,13 +44,13 @@ const Home = () => {
       height: 200,
     },
     {
-      imageUrl: '/imagenes/perifericos.jpg',
+      imageUrl: monitorGamerImg,
       title: 'Monitores',
       description:
         'Mejora tu experiencia de usuario con nuestra selección de teclados, ratones, auriculares y más. Todo lo que necesitas para tu configuración perfecta.',
       link: '/categorias/perifericos',
       width: 300,
-      height: 300,
+      height: 200,
     },
     {
       imageUrl: '/imagenes/perifericos.jpg',
@@ -63,10 +65,8 @@ const Home = () => {
   return (
     <div className="flex min-h-screen flex-col p-6">
       <Header />
-
       <main className="bg-light flex min-h-screen flex-col p-6">
         <Banner />
-
         <div className="container my-4">
           <h3>Categorías Destacadas</h3>
           <div className="row">
@@ -119,6 +119,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <Footer />
 
         {/* <section id="sobre-nosotros" className="my-4 bg-gray-100 py-4">
           <div className="d-flex container mx-auto ">

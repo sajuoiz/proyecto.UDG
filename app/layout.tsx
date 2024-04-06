@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/all.css';
 import './styles/header.css';
+import './styles/footer.css';
 
 export default function RootLayout({
   children,
