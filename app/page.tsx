@@ -67,23 +67,6 @@ const Home = () => {
       <Header />
       <main className="bg-light flex min-h-screen flex-col p-6">
         <Banner />
-        <div className="container my-4">
-          <h3>Categorías Destacadas</h3>
-          <div className="row">
-            {categories.map((category, index) => (
-              <div key={index} className="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <CategoriaDestacada
-                  imageUrl={category.imageUrl}
-                  title={category.title}
-                  description={category.description}
-                  link={category.link}
-                  width={category.width}
-                  height={category.height}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
 
         <section id="productos-populares" className="my-4">
           <div className="container mx-auto p-4">
