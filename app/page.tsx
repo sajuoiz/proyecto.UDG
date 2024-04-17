@@ -21,7 +21,7 @@ import EchoDotImage from '../public/imagenes/echo_dot.jpg';
 import InnovationImage from '../public/imagenes/innovation.jpg';
 import bannerPrincipalImage from '../public/imagenes/banner-principal.jpg';
 import monitorGamerimg from '/public/imagenes/categorias/Monitor_gamer_categoria.jpg'
-
+import tecladoimg from '/public/imagenes/categorias/teclado_otro.jpg'
 const Home = () => {
   const categories = [
     {
@@ -52,13 +52,13 @@ const Home = () => {
       height: 200,
     },
     {
-      imageUrl: '/imagenes/perifericos.jpg',
+      imageUrl: tecladoimg,
       title: 'teclados',
       description:
         'Mejora tu experiencia de usuario con nuestra selección de teclados, ratones, auriculares y más. Todo lo que necesitas para tu configuración perfecta.',
       link: '/categorias/perifericos',
       width: 300,
-      height: 300,
+      height: 200,
     },
   ];
   return (

@@ -40,7 +40,7 @@ const Header = () => {
             </li>
             <li className="data-container px-4">
               <a className="btn" href="#productos-populares">
-                Tendencia
+                Ayuda
               </a>
             </li>
             <li className="data-container px-4">
