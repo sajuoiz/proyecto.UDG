@@ -6,11 +6,13 @@ import Header from './header';
 import ProductoDestacado from './components/Producto';
 import CategoriaDestacada from './components/categoriaDestacada';
 import Banner from './components/banner';
+import Footer from './footer';
 import pcBanner from '../public/imagenes/pc-banner-0.jpg';
 import monitorBanner from '../public/imagenes/pc-banner-1.jpg';
 import Image from 'next/image';
 import laptopGamerImg from '/public/imagenes/categorias/Laptop_Gamer_Categorias.jpg';
 import computadoraGamerImg from '/public/imagenes/categorias/Computadoras_Gamer_Categorias.jpg';
+import monitorGamerImg from '/public/imagenes/categorias/Monitor_Gamer_Categorias.jpg';
 import audifonosSonyImage from '../public/imagenes/audifonos_sony.jpg';
 import laptopLegionImage from '../public/imagenes/laptop_legion.jpg';
 import pcGamerImage from '../public/imagenes/pc_gamer.jpg';
@@ -20,8 +22,8 @@ import AppleVision from '../public/imagenes/apple_vision.jpg';
 import EchoDotImage from '../public/imagenes/echo_dot.jpg';
 import InnovationImage from '../public/imagenes/innovation.jpg';
 import bannerPrincipalImage from '../public/imagenes/banner-principal.jpg';
-import monitorGamerimg from '/public/imagenes/categorias/Monitor_gamer_categoria.jpg'
-import tecladoimg from '/public/imagenes/categorias/teclado_otro.jpg'
+import monitorGamerimg from '/public/imagenes/categorias/Monitor_gamer_categoria.jpg';
+import tecladoimg from '/public/imagenes/categorias/teclado_otro.jpg';
 const Home = () => {
   const categories = [
     {
@@ -64,27 +66,8 @@ const Home = () => {
   return (
     <div className="flex min-h-screen flex-col p-6">
       <Header />
-
       <main className="bg-light flex min-h-screen flex-col p-6">
         <Banner />
-
-        <div className="container my-4">
-          <h3>Categorías Destacadas</h3>
-          <div className="row">
-            {categories.map((category, index) => (
-              <div key={index} className="col-md-6 col-lg-4 col-xl-3 mb-4">
-                <CategoriaDestacada
-                  imageUrl={category.imageUrl}
-                  title={category.title}
-                  description={category.description}
-                  link={category.link}
-                  width={category.width}
-                  height={category.height}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
 
         <section id="productos-populares" className="my-4">
           <div className="container mx-auto p-4">
@@ -120,6 +103,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <Footer />
 
         {/* <section id="sobre-nosotros" className="my-4 bg-gray-100 py-4">
           <div className="d-flex container mx-auto ">
