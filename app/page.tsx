@@ -61,13 +61,13 @@ const Home = () => {
     <div className="flex min-h-screen flex-col p-6">
       <Header />
       <main className="bg-light flex min-h-screen flex-col p-6">
-        <div style={{ backgroundColor: ' black' }}>
+        <div style={{ backgroundColor: '#120925' }}>
           <Banner />
         </div>
 
         <section className="my-4">
           <div className="container mx-auto p-4">
-            <div className="row justify-content-center">
+            <div className="row justify-content-center align-items-center">
               <div className="col-12 col-sm-6 col-lg-3 mb-4">
                 <div
                   className="card p-3 shadow"

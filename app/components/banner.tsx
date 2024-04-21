@@ -34,10 +34,10 @@ const CategoriaDestacada: React.FC = ({}) => {
   return (
     <div className="pb-4">
       <h3
-        className="pb-2 pt-4 text-center"
-        style={{ paddingTop: '50px', color: 'white', fontSize: '3rem' }}
+        className="pb-2 text-center"
+        style={{ color: 'white', fontSize: '3rem' }}
       >
-        Productos Destacados
+        <span className="fancy">Productos</span> Destacados
       </h3>
       <div className="d-flex justify-content-center py-4">
         <div className="carousel slide" data-bs-ride="carousel">

@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import LogoImg from '../../public/imagenes/logo/logo-principal.png';
+import Link from 'next/link';
 
 const Header = () => {
   return (
     <header className={`navbar navbar-expand-lg navbar-dark custom-header`}>
       <div className="container-fluid">
-        <a className="navbar-brand" style={{ marginLeft: '50px' }} href="#">
+        <Link href="/" className="navbar-brand" style={{ marginLeft: '50px' }}>
           CiberEspacio
           <Image
             src={LogoImg}
@@ -14,7 +15,8 @@ const Header = () => {
             height={50}
             style={{ marginLeft: '20px' }}
           />
-        </a>
+        </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -26,7 +28,6 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        {/* create a next image with a good aspect ratio for the logo in the header */}
 
         <div
           className="navbar-collapse d-flex justify-content-end collapse me-4"
@@ -34,14 +35,14 @@ const Header = () => {
         >
           <ul className="navbar-nav custom-navbar-nav">
             <li className="data-container px-4">
-              <a className="btn" href="#categorias-destacadas">
+              <Link className="btn" href="/catalogo">
                 Catalogo
-              </a>
+              </Link>
             </li>
             <li className="data-container px-4">
-              <a className="btn" href="#productos-populares">
+              <Link className="btn" href="/nosotros">
                 Nosotros
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
