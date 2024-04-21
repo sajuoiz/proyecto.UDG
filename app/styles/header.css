@@ -11,7 +11,7 @@
   font-size: 20px;
 
   transition: all 1s;
-  color: white;
+  color: white !important;
 }
 
 .btn:after,
@@ -39,7 +39,7 @@
 }
 
 .btn:hover {
-  color: rgb(0, 0, 0);
+  color: black !important;
   background-color: white;
 }
 

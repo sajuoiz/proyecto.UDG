@@ -121,3 +121,11 @@
     flex-basis: 50%;
   }
 }
+
+.card {
+  cursor: pointer;
+}
+
+.banner-image {
+  height: 80vh !important;
+}

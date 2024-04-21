@@ -29,10 +29,14 @@ const CategoriaDestacada: React.FC = ({}) => {
       goToNext();
     }, 3000); // Change slide every 3 seconds
     return () => clearInterval(interval);
-  }, [activeIndex]);
+  }, []);
+
   return (
-    <>
-      <h3 className="text-center" style={{ paddingTop: '50px' }}>
+    <div className="pb-4">
+      <h3
+        className="pb-2 pt-4 text-center"
+        style={{ paddingTop: '50px', color: 'white', fontSize: '3rem' }}
+      >
         Productos Destacados
       </h3>
       <div className="d-flex justify-content-center py-4">
@@ -48,8 +52,10 @@ const CategoriaDestacada: React.FC = ({}) => {
                 <Image
                   src={src}
                   alt={`Slide ${index}`}
+                  layout="responsive"
                   width={900}
                   height={500}
+                  className="banner-image"
                 />
               </div>
             ))}
@@ -76,7 +82,7 @@ const CategoriaDestacada: React.FC = ({}) => {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

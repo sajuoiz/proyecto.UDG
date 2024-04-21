@@ -35,16 +35,11 @@ const Header = () => {
           <ul className="navbar-nav custom-navbar-nav">
             <li className="data-container px-4">
               <a className="btn" href="#categorias-destacadas">
-                Categorias
+                Catalogo
               </a>
             </li>
             <li className="data-container px-4">
               <a className="btn" href="#productos-populares">
-                Ayuda
-              </a>
-            </li>
-            <li className="data-container px-4">
-              <a className="btn" href="#sobre-nosotros">
                 Nosotros
               </a>
             </li>
