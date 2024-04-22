@@ -2,7 +2,10 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-dark mt-auto py-4 text-white">
+    <footer
+      className="mt-auto py-4 text-white"
+      style={{ backgroundColor: '#120925' }}
+    >
       <div className="footer container">
         <div className="row">
           {/* Columna de información de la empresa */}
