@@ -23,59 +23,11 @@
   outline: none;
 }
 
-.producto-card {
-  border: 1px solid #e1e1e1;
-  border-radius: 8px;
-  padding: 16px;
-  text-align: center;
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-.producto-card:hover {
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-.producto-img {
-  border-radius: 8px;
-}
-
-.producto-nombre {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.producto-descripcion {
-  font-size: 14px;
-  color: #666;
-  margin: 8px 0;
-}
-
-.producto-precio {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 8px;
-}
-
-.producto-boton {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.producto-boton:hover {
-  background-color: #0056b3;
-}
-
-/* Sobre Nosotros - Estilos CSS */
-
 .bg-gray-100 {
   background-color: #f7f7f7;
 }
+
+/* Sobre Nosotros */
 
 #sobre-nosotros {
   text-align: left;
@@ -141,10 +93,8 @@
   }
 }
 
-.titulo-principal {
-  h2 {
-    font-size: 50px !important;
-  }
+h2 {
+  font-size: 50px !important;
 }
 
 .catalogo-seccion {
@@ -159,4 +109,9 @@
 .chevron-icono:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.carta-personalizada:hover {
+  cursor: pointer;
+  opacity: 1 !important;
 }

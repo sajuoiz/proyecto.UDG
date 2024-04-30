@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import Header from '../header';
 import Footer from '../footer';
 import categoriaPcImg from '/public/imagenes/categorias/categoria_pc.jpg';
@@ -48,13 +49,15 @@ const Catalogo = () => {
                 nulla pariatur. Excepteur sint occaecat cupidatat non proident,
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <Image
-                width={50}
-                height={50}
-                src={chevronIcono}
-                alt="Chevron Icono"
-                className="chevron-icono"
-              />
+              <Link href="/catalogo/pc">
+                <Image
+                  width={50}
+                  height={50}
+                  src={chevronIcono}
+                  alt="Chevron Icono"
+                  className="chevron-icono"
+                />
+              </Link>
             </div>
           </div>
         </div>
