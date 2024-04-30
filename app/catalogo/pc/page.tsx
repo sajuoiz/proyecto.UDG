@@ -1,9 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import Header from '../../header';
 import Footer from '../../footer';
 import { productosPc } from './pc';
-import Image from 'next/image';
+import chevronIcono from '/public/imagenes/iconos/chevron.png';
 
 const CatalogoPc = () => {
   //funcion para convertir el precio que es un numero a una cadena de caracteres que incluya $ y , para separar los miles
@@ -47,12 +48,6 @@ const CatalogoPc = () => {
                     }}
                     className="carta-personalizada"
                   >
-                    <h3 style={{ fontWeight: 700 }} className="m-0">
-                      {producto.nombre}
-                    </h3>
-                    <p style={{ fontWeight: 500, color: 'gray' }}>
-                      {producto.detalles}
-                    </p>
                     <div className=" d-flex justify-content-center">
                       {producto.imagen ? (
                         <Image
@@ -63,10 +58,34 @@ const CatalogoPc = () => {
                         />
                       ) : null}
                     </div>
-                    <div className="d-flex justify-content-end pt-3">
-                      <p style={{ fontSize: '20px' }}>
+                    <div style={{ paddingTop: '25px' }}>
+                      <h3 style={{ fontWeight: 700 }} className="m-0">
+                        {producto.nombre}
+                      </h3>
+                      <p
+                        style={{
+                          fontWeight: 500,
+                          color: 'gray',
+                          marginBottom: '10px',
+                        }}
+                      >
+                        {producto.detalles}
+                      </p>
+                    </div>
+                    <div className="d-flex justify-content-end align-items-center">
+                      <p
+                        style={{ fontSize: '20px', margin: 0 }}
+                        className="pe-2"
+                      >
                         {convertirPrecio(producto.precio)} MXN
                       </p>
+                      <Image
+                        width={20}
+                        height={20}
+                        src={chevronIcono}
+                        alt="Chevron Icono"
+                        className="chevron-producto"
+                      />
                     </div>
                   </div>
                 </div>

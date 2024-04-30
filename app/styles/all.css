@@ -114,4 +114,13 @@ h2 {
 .carta-personalizada:hover {
   cursor: pointer;
   opacity: 1 !important;
+
+  .chevron-producto {
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+  }
+}
+
+.chevron-producto {
+  opacity: 0;
 }
